@@ -24,7 +24,7 @@ ${Delete-TestCase-Completed_tab}    //button[@id="1"]
     Go To                      ${To_Do_List}
 
 2. Check all tab can be clicked
-    #เริ่มกดจาก To-Do-Tasks_tab ก่อน เพราะ AddItem_tab มันเป็น defualt tab ตั้งแต่เปิด website
+    #เริ่มกดจาก To-Do-Tasks_tab ก่อน เพราะ AddItem_tab มันเป็น default tab ตั้งแต่เปิด website
     Sleep            2s
     Click Element    ${To-Do-Tasks_tab}
     Sleep            2s
