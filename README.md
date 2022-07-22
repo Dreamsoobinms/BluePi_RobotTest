@@ -32,7 +32,7 @@
 -> https://chromedriver.chromium.org/ 
 -> Download zip file -> Extract zip file -> เลือก location path ในการเก็บ chromedriver.exe 
 
-***การเรียกใช้งาน chromedriver***
+***การเรียกใช้งาน chromedriver ใน test script***
 Create Webdriver	Chrome	executable_path=C:/your location PATH/chromedriver.exe 
 Go To 	http://xxx.com
 
