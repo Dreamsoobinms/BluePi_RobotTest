@@ -18,7 +18,7 @@ ${Delete-TestCase-Completed_tab}    //button[@id="2"]
 
 *** Test Cases ***
 1. Open To-Do-List Website
-    #execute_path อาจจะต้องตั้งใหม่ตาม location ที่ clone repository ลงมาจาก github หรือ zip file มีขั้นตอนสอน ใน README
+    #executable_path อาจจะต้องตั้งใหม่ตาม location ที่ clone repository ลงมาจาก github หรือ zip file มีขั้นตอนสอน ใน README
     Create Webdriver           Chrome           executable_path=C:/Users/home/Documents/GitHub/BluePi_RobotTest/chromedriver.exe
     Maximize Browser Window
     Go To                      ${To_Do_List}
