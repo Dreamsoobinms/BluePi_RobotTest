@@ -11,26 +11,28 @@ ${Completed_tab}                    //a[@href="#completed"]
 ${Delete-eatLunch_button}           //button[@id="2"]
 ${PlayGame_checkbox}                //label[@for="2"]
 ${TestCase_checkbox}                //label[@for="1"]
-${Delete-TestCase-Completed_tab}    //button[@id="1"]
+${Delete-TestCase-Completed_tab}    //button[@id="2"]
 
 *** Keywords ***
 
 
 *** Test Cases ***
 1. Open To-Do-List Website
-    #execute_path อาจจะต้องตั้งใหม่ตาม location ที่ clone repository ลงมาจาก github หรือ zip file
+    #execute_path อาจจะต้องตั้งใหม่ตาม location ที่ clone repository ลงมาจาก github หรือ zip file มีขั้นตอนสอน ใน README
     Create Webdriver           Chrome           executable_path=C:/Users/home/Documents/GitHub/BluePi_RobotTest/chromedriver.exe
     Maximize Browser Window
     Go To                      ${To_Do_List}
 
 2. Check all tab can be clicked
     #เริ่มกดจาก To-Do-Tasks_tab ก่อน เพราะ AddItem_tab มันเป็น default tab ตั้งแต่เปิด website
-    Sleep            2s
-    Click Element    ${To-Do-Tasks_tab}
-    Sleep            2s
-    Click Element    ${Completed_tab}
-    Sleep            2s
-    Click Element    ${AddItem_tab}
+    Sleep                       2s
+    Wait Until Page Contains    To Do List
+    Sleep                       2s
+    Click Element               ${To-Do-Tasks_tab}
+    Sleep                       2s
+    Click Element               ${Completed_tab}
+    Sleep                       2s
+    Click Element               ${AddItem_tab}
 
 3. Add To-Do-List Item
     @{ITEM_LIST}    Create List          เขียน Test Cases    ทานข้าวกลางวัน    ประชุมบ่าย      เล่นเกม
@@ -64,3 +66,5 @@ ${Delete-TestCase-Completed_tab}    //button[@id="1"]
     Click Button    ${Delete-TestCase-Completed_tab}
 
 9. Close To-Do-List Website
+    Sleep            2s
+    Close Browser
