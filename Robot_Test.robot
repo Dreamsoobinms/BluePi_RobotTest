@@ -18,53 +18,49 @@ ${Delete-TestCase-Completed_tab}    //button[@id="2"]
 
 *** Test Cases ***
 1. Open To-Do-List Website
-    #executable_path อาจจะต้องตั้งใหม่ตาม location ที่ clone repository ลงมาจาก github หรือ zip file มีขั้นตอนสอน ใน README
+# executable_path อาจจะต้องตั้งใหม่ตาม location ที่ clone repository ลงมาจาก github หรือ zip file มีขั้นตอนสอน ใน README
     Create Webdriver           Chrome           executable_path=C:/Users/home/Documents/GitHub/BluePi_RobotTest/chromedriver.exe
     Maximize Browser Window
     Go To                      ${To_Do_List}
 
 2. Check all tab can be clicked
-    #เริ่มกดจาก To-Do-Tasks_tab ก่อน เพราะ AddItem_tab มันเป็น default tab ตั้งแต่เปิด website
-    Sleep                       2s
+# เริ่มกดจาก To-Do-Tasks_tab ก่อน เพราะ AddItem_tab มันเป็น default tab ตั้งแต่เปิด website
     Wait Until Page Contains    To Do List
-    Sleep                       2s
+    Sleep                       1s
     Click Element               ${To-Do-Tasks_tab}
-    Sleep                       2s
+    Sleep                       1s
     Click Element               ${Completed_tab}
-    Sleep                       2s
+    Sleep                       1s
     Click Element               ${AddItem_tab}
 
 3. Add To-Do-List Item
     @{ITEM_LIST}    Create List          เขียน Test Cases    ทานข้าวกลางวัน    ประชุมบ่าย      เล่นเกม
     FOR             ${INDEX}             ${ELEMENT}          IN ENUMERATE      @{ITEM_LIST}
-    Sleep           2s
+    Sleep           1s
     Input Text      ${new-task}          ${ELEMENT}
-    Sleep           2s
+    Sleep           1s
     Click Button    ${AddItem_button}
-    END
+    END             
 
-4. Check To-Do-List Item in To-Do Tasks
-    Sleep            2s
-    Click Element    ${To-Do-Tasks_tab}    
+4. Delete Item in To-Do-List Tasks
+# เลือก ทานข้าวกลางวัน
+    Sleep            1s
+    Click Element    ${To-Do-Tasks_tab}
+    Sleep            1s
+    Click Button     ${Delete-eatLunch_button}
 
-5. Delete Item in To-Do-List Tasks (ทานข้าวกลางวัน)
-    Sleep           2s
-    Click Button    ${Delete-eatLunch_button}
-
-6. Click check box in To-Do-List Tasks (เขียน Test Cases & เล่นเกม)
-    Sleep            2s
+5. Click check box in To-Do-List Tasks
+# เลือก เขียน Test Cases & เล่นเกม
+    Sleep            1s
     Click Element    ${TestCase_checkbox}
-    Sleep            2s
+    Sleep            1s
     Click Element    ${PlayGame_checkbox}
 
-7. Check To-Do Tasks in Completed
-    Sleep            2s
+6. Delete To-Do Tasks in Completed
+# เลือก เขียน Test Cases
+    Sleep            1s
     Click Element    ${Completed_tab} 
-
-8. Delete To-Do Tasks in Completed (เขียน Test Cases)
-    Sleep           2s
-    Click Button    ${Delete-TestCase-Completed_tab}
-
-9. Close To-Do-List Website
-    Sleep            2s
+    Sleep            1s
+    Click Button     ${Delete-TestCase-Completed_tab}
+    Sleep            1s
     Close Browser
