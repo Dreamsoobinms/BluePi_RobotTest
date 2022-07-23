@@ -43,7 +43,7 @@ ${Delete-TestCase-Completed_tab}    //button[@id="2"]
     END             
 
 4. Delete Item in To-Do-List Tasks
-# เลือก ทานข้าวกลางวัน
+# เลือกลบ ทานข้าวกลางวัน
     Sleep            1s
     Click Element    ${To-Do-Tasks_tab}
     Sleep            1s
@@ -57,7 +57,7 @@ ${Delete-TestCase-Completed_tab}    //button[@id="2"]
     Click Element    ${PlayGame_checkbox}
 
 6. Delete To-Do Tasks in Completed
-# เลือก เขียน Test Cases
+# เลือกลบ เขียน Test Cases
     Sleep            1s
     Click Element    ${Completed_tab} 
     Sleep            1s
