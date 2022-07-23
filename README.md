@@ -1,13 +1,13 @@
 ***ขั้นตอนการติดตั้งโปรแกรม เพื่อใช้งาน Robot Framework บน VS code***
 1. Download และ Install python (เข้าไปที่ python.org)
 
-2. เปิด command prompt และใส่ script ตามด้านล่างเพื่อ Install robot framework
+2. เปิด command prompt และใส่ script ตามนี้เพื่อ Install robot framework
 -> pip install robotframework
 
-3. หาก pip version ไม่ใช่ล่าสุด ใส่ script ตามด้านล่าง
+3. หาก pip version ไม่ใช่ล่าสุด ใส่ script ตามนี้
 -> -m pip install –upgrade pip
 
-4. ตั้งติดตั้ง selenium2library เป็น web testing library ของ robotframework โดยใส่ script ตามด้านล่าง
+4. ตั้งติดตั้ง selenium2library เป็น web testing library ของ robotframework โดยใส่ script ตามนี้
 -> pip install robotframework-selenium2library
 
 5. Download และ Install Visual Studio Code (เข้าไปที่ code.visualstudio.com)
