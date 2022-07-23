@@ -49,7 +49,7 @@ ${Delete-TestCase-Completed_tab}    //button[@id="2"]
     Sleep            1s
     Click Button     ${Delete-eatLunch_button}
 
-5. Click check box in To-Do-List Tasks
+5. Select Item in To-Do-List Tasks
 # เลือก เขียน Test Cases & เล่นเกม
     Sleep            1s
     Click Element    ${TestCase_checkbox}
